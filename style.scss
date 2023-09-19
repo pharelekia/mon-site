@@ -1,0 +1,117 @@
+$clr-title: #a5b4fc;
+$clr-txt: #5d87e9 ;
+$size-txt: 20px;
+$size-title: 50px;
+
+// @mixin taille-photo{
+//     width: 400px;
+//     height: 400px;
+//     object-fit: cover;
+// }
+
+@mixin taille-photo($largeur, $hauteur){
+    width: $largeur;
+    height: $hauteur;
+    object-fit: cover;
+}
+
+
+@mixin bouton{
+    border: none;
+    border-radius: 50px;
+    width: 250px;
+    height: 55px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #a6a7e3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.en-tete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    & .logo{
+        margin: 0 20px;
+    }
+    & .list ul{
+        width: 350px;
+        display: flex;
+
+        & li{
+            margin: 0 20px;
+            list-style-type: none;
+            font-size: $size-txt;
+        }
+    }
+}
+
+.info-perso{
+    background-color: #1f2039;
+    height: 80vh;
+    &-section{
+        display: flex;
+        width: 70%;
+        margin: auto;
+        &-1{
+            width: 500px;
+            margin: 50px 0;
+
+            & h1{
+                font-size: $size-title;
+                color: $clr-title;
+            }
+            & p{
+                font-size: $size-txt;
+                color: #fff;
+            }
+            & button{
+                @include bouton;
+            }
+        }
+    }
+     & .profil{
+        margin: 50px 80px;
+
+        & img{
+            @include taille-photo(400px, 400px)
+        }
+     }
+}
+
+.mes-projets{
+    & h2{
+        text-align: center;
+        font-size: $size-title;
+    }
+    &-photos{
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 300px 300px;
+        gap: 15px;
+        margin: 0 20%;
+
+        & img{
+            @include taille-photo(300px, 300px );
+        }
+    }
+}
+
+.me-contacter{
+
+    & form{
+        & .mon-input{
+            display: flex;
+        }
+    }
+}
+
+

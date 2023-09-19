@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.en-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.en-tete .logo {
+  margin: 0 20px;
+}
+.en-tete .list ul {
+  width: 350px;
+  display: flex;
+}
+.en-tete .list ul li {
+  margin: 0 20px;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.info-perso {
+  background-color: #1f2039;
+  height: 80vh;
+}
+.info-perso-section {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.info-perso-section-1 {
+  width: 500px;
+  margin: 50px 0;
+}
+.info-perso-section-1 h1 {
+  font-size: 50px;
+  color: #a5b4fc;
+}
+.info-perso-section-1 p {
+  font-size: 20px;
+  color: #fff;
+}
+.info-perso-section-1 button {
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+  height: 55px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #a6a7e3;
+}
+.info-perso .profil {
+  margin: 50px 80px;
+}
+.info-perso .profil img {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mes-projets h2 {
+  text-align: center;
+  font-size: 50px;
+}
+.mes-projets-photos {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
+  gap: 15px;
+  margin: 0 20%;
+}
+.mes-projets-photos img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.me-contacter form .mon-input {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
