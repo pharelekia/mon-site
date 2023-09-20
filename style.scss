@@ -1,21 +1,14 @@
 $clr-title: #a5b4fc;
 $clr-txt: #5d87e9 ;
-$size-txt: 20px;
+$size-txt: 18px;
 $size-title: 50px;
-
-// @mixin taille-photo{
-//     width: 400px;
-//     height: 400px;
-//     object-fit: cover;
-// }
+$clr-bg: #1f2039;
 
 @mixin taille-photo($largeur, $hauteur){
     width: $largeur;
     height: $hauteur;
     object-fit: cover;
 }
-
-
 @mixin bouton{
     border: none;
     border-radius: 50px;
@@ -27,10 +20,12 @@ $size-title: 50px;
     background-color: #a6a7e3;
 }
 
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .en-tete{
@@ -88,6 +83,7 @@ body{
 }
 
 .mes-projets{
+    margin-top: 10vh;
     & h2{
         text-align: center;
         font-size: $size-title;
@@ -106,12 +102,55 @@ body{
 }
 
 .me-contacter{
-
+    background-color: $clr-bg;
+    height: 80vh;
+    margin-top: 20vh;
+    h2{
+        text-align: center;
+        color: $clr-title;
+        padding-top: 50px;
+    }
     & form{
+        width: 70%;
+        margin: auto;
         & .mon-input{
             display: flex;
+
+            div{
+                margin: 30px 10px;
+                color: #fff;
+            }
+
+            & input{
+                width: 500px;
+                height: 45px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+        }
+
+        & .area-txt{
+            color: #fff;
+            margin-left: 10px;
+            textarea{
+                width: 77.3em;
+                height: 160px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+        }
+
+        & .btn-envoi{
+            @include bouton;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
         }
     }
+}
+
+.pied-de-page{
+    @extend .en-tete
 }
 
 

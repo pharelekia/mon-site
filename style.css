@@ -2,25 +2,26 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.en-tete {
+.en-tete, .pied-de-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
 }
-.en-tete .logo {
+.en-tete .logo, .pied-de-page .logo {
   margin: 0 20px;
 }
-.en-tete .list ul {
+.en-tete .list ul, .pied-de-page .list ul {
   width: 350px;
   display: flex;
 }
-.en-tete .list ul li {
+.en-tete .list ul li, .pied-de-page .list ul li {
   margin: 0 20px;
   list-style-type: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .info-perso {
@@ -41,7 +42,7 @@ body {
   color: #a5b4fc;
 }
 .info-perso-section-1 p {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
 }
 .info-perso-section-1 button {
@@ -64,6 +65,9 @@ body {
      object-fit: cover;
 }
 
+.mes-projets {
+  margin-top: 10vh;
+}
 .mes-projets h2 {
   text-align: center;
   font-size: 50px;
@@ -82,6 +86,53 @@ body {
      object-fit: cover;
 }
 
+.me-contacter {
+  background-color: #1f2039;
+  height: 80vh;
+  margin-top: 20vh;
+}
+.me-contacter h2 {
+  text-align: center;
+  color: #a5b4fc;
+  padding-top: 50px;
+}
+.me-contacter form {
+  width: 70%;
+  margin: auto;
+}
 .me-contacter form .mon-input {
   display: flex;
+}
+.me-contacter form .mon-input div {
+  margin: 30px 10px;
+  color: #fff;
+}
+.me-contacter form .mon-input input {
+  width: 500px;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.me-contacter form .area-txt {
+  color: #fff;
+  margin-left: 10px;
+}
+.me-contacter form .area-txt textarea {
+  width: 77.3em;
+  height: 160px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.me-contacter form .btn-envoi {
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+  height: 55px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #a6a7e3;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */
