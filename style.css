@@ -23,7 +23,27 @@ body {
   list-style-type: none;
   font-size: 18px;
 }
+.en-tete .list ul li:hover::after, .pied-de-page .list ul li:hover::after {
+  animation: list-animate 0.5s forwards;
+}
 
+ul li::after {
+  content: " ";
+  display: flex;
+  width: 80px;
+  height: 5px;
+  background-color: #5d87e9;
+  transform: scaleX(0);
+}
+
+@keyframes list-animate {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 .info-perso {
   background-color: #1f2039;
   height: 80vh;

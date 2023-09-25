@@ -45,9 +45,35 @@ body{
             margin: 0 20px;
             list-style-type: none;
             font-size: $size-txt;
+
+            // permet d'annimer la bar du bas
+            &:hover::after{
+                animation: list-animate .5s forwards;
+            }
         }
+
     }
 }
+
+ul li::after{
+    content: " ";
+    display: flex;  
+
+    width: 80px;
+    height: 5px;
+    background-color: $clr-txt; 
+    transform: scaleX(0);
+}
+
+@keyframes list-animate {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
 
 .info-perso{
     background-color: #1f2039;
