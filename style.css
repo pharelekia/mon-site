@@ -31,7 +31,7 @@ ul li::after {
   content: " ";
   display: flex;
   width: 80px;
-  height: 5px;
+  height: 2px;
   background-color: #5d87e9;
   transform: scaleX(0);
 }
@@ -100,10 +100,18 @@ ul li::after {
   margin: 0 20%;
 }
 .mes-projets-photos img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+.mes-projets-photos img:hover {
+  transform: scale(1.2);
+}
+.mes-projets .image {
+  width: 300px;
+  overflow: hidden;
 }
 
 .me-contacter {
