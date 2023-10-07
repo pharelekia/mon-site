@@ -25,7 +25,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .en-tete{
@@ -42,9 +42,10 @@ body{
         display: flex;
 
         & li{
-            margin: 0 20px;
+            margin: 0 15px;
             list-style-type: none;
             font-size: $size-txt;
+            cursor: pointer;
 
             // permet d'annimer la bar du bas
             &:hover::after{
@@ -58,7 +59,6 @@ body{
 ul li::after{
     content: " ";
     display: flex;  
-
     width: 80px;
     height: 2px;
     background-color: $clr-txt; 
@@ -93,9 +93,15 @@ ul li::after{
             & p{
                 font-size: $size-txt;
                 color: #fff;
+                line-height: 25px;
             }
             & button{
                 @include bouton;
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    background-color: darken(#a6a7e3, 5);
+                }
             }
         }
     }
@@ -108,11 +114,22 @@ ul li::after{
      }
 }
 
+
+
 .mes-projets{
     margin-top: 10vh;
     & h2{
         text-align: center;
-        font-size: $size-title;
+        font-size: 30px;
+
+        // &::after{
+        //     content: "";
+        //     display: flex;  
+        //     width: 100px;
+        //     height: 3px;
+        //     background-color: $clr-txt; 
+        //     margin: 14px auto;
+        // }
     }
     &-photos{
         display: grid;
@@ -163,6 +180,17 @@ ul li::after{
                 height: 45px;
                 border-radius: 5px;
                 margin-top: 10px;
+                outline: none;
+                color: $clr-txt;
+                font-size: $size-txt;
+
+                &:focus{
+                    border: 3px solid $clr-title;
+                }
+            }
+            .email:invalid{
+                animation: animate-input .1s 3 ease-in-out;
+                background-color: rgb(247, 5, 5);
             }
         }
 
@@ -170,19 +198,35 @@ ul li::after{
             color: #fff;
             margin-left: 10px;
             textarea{
-                width: 77.3em;
+                width: 57.3em;
                 height: 160px;
                 border-radius: 5px;
                 margin-top: 10px;
+                outline: none;
+                color: $clr-txt;
+                font-size: $size-txt;
+                &:focus{
+                    border: 3px solid $clr-title;
+                }
             }
         }
-
-        & .btn-envoi{
+        button{
             @include bouton;
-            text-align: center;
-            margin: auto;
-            margin-top: 30px;
+            transform: translate(55vh,5vh);
+            cursor: pointer;
+            &:hover{
+                background-color: darken(#a6a7e3, 5);
+            }
         }
+    }
+}
+
+@keyframes animate-input {
+    25%{
+        transform: translateX(2%);
+    }
+    75%{
+        transform: translatex(-2%);
     }
 }
 
