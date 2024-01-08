@@ -373,3 +373,105 @@ ul li::after{
 }
 
 
+@media screen and (max-width: 900px){
+    .mes-projets{
+        margin-top: 5vh;
+        &-photos{
+            display: flex;
+            flex-direction: column;
+            margin: 0 280px;
+            & img{
+                @include taille-photo(300px, 350px);
+            }
+        }
+}
+.info-perso{
+    height: 110vh;
+    &-section{
+        margin: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        &-1{
+            width: 350px;
+            margin: 0;
+
+            & h1{
+                font-size: 30px;
+                text-align: center;
+            }
+            & p{
+                text-align: justify;
+            }
+            & button{
+                
+                margin-left: 50px;
+            }
+        }
+    }
+     & .profil{
+        & img{
+            @include taille-photo(350px, 350px)
+        }
+     }
+}
+.list {
+        height: 100%;
+        width: 400px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -550px;
+        background-color: #1f2039;
+        transition: right 0.5s ease;
+        & ul{
+            flex-direction: column;
+            & li{
+                padding-top: 10px;
+                color: white;
+            }
+        }
+      }
+    .close {
+        display: block;
+      }
+    .burger-icon span {
+        display: block;
+      }
+
+      .me-contacter{
+        margin-top: 0;
+        height: 75vh;
+        & form{
+            & .mon-input{
+                flex-direction: column;
+    
+                div{
+                    margin: 10px 150px;
+                }
+    
+                & input{
+                    width: 300px;
+                    height: 35px;
+                    margin-top: 0;
+                }
+            }
+    
+            & .area-txt{
+                color: #fff;
+                margin: 20px 80px;
+                textarea{
+                    width: 17em;
+                    height: 130px;
+                    margin-top: 0;
+                }
+            }
+            button{
+                transform: translate(25vh,2vh);
+            }
+        }
+    }
+
+}
+
+
+
