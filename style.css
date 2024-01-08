@@ -2,17 +2,25 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 .en-tete, .pied-de-page {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100px;
 }
 .en-tete .logo, .pied-de-page .logo {
   margin: 0 20px;
+  text-transform: uppercase;
+  border: 2px solid black;
+  padding: 10px;
+  font-weight: bolder;
+}
+.en-tete .logo span, .pied-de-page .logo span {
+  background-color: #1f2039;
+  color: #fff;
+  padding: 5px;
 }
 .en-tete .list ul, .pied-de-page .list ul {
   width: 350px;
@@ -97,14 +105,15 @@ ul li::after {
 }
 .mes-projets h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 .mes-projets-photos {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 300px 300px;
   gap: 15px;
-  margin: 0 20%;
+  margin: 10vh 20%;
 }
 .mes-projets-photos img {
   width: 100%;
@@ -124,7 +133,7 @@ ul li::after {
 .me-contacter {
   background-color: #1f2039;
   height: 80vh;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 .me-contacter h2 {
   text-align: center;
@@ -197,4 +206,11 @@ ul li::after {
   75% {
     transform: translatex(-2%);
   }
+}
+.reseaux .fa-instagram {
+  font-size: 35px;
+  margin: 0 20px;
+}
+.reseaux .fa-x-twitter {
+  font-size: 35px;
 }/*# sourceMappingURL=style.css.map */

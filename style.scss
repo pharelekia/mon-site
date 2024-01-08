@@ -25,17 +25,25 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .en-tete{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100px;
 
     & .logo{
         margin: 0 20px;
+        text-transform: uppercase;
+        border: 2px solid black;
+        padding: 10px;
+        font-weight: bolder;
+        & span{
+            background-color: #1f2039;
+            color: #fff;
+            padding: 5px;
+        }
     }
     & .list ul{
         width: 350px;
@@ -120,24 +128,15 @@ ul li::after{
     margin-top: 10vh;
     & h2{
         text-align: center;
-        font-size: 30px;
-
-        // &::after{
-        //     content: "";
-        //     display: flex;  
-        //     width: 100px;
-        //     height: 3px;
-        //     background-color: $clr-txt; 
-        //     margin: 14px auto;
-        // }
+        font-size: 20px;
+        text-transform: uppercase;
     }
     &-photos{
         display: grid;
         grid-template-columns: 300px 300px 300px;
         grid-template-rows: 300px 300px;
         gap: 15px;
-        margin: 0 20%;
-
+        margin: 10vh 20%;
         & img{
             @include taille-photo(100%, 100% );
 
@@ -158,7 +157,7 @@ ul li::after{
 .me-contacter{
     background-color: $clr-bg;
     height: 80vh;
-    margin-top: 20vh;
+    margin-top: 10vh;
     h2{
         text-align: center;
         color: $clr-title;
@@ -231,7 +230,16 @@ ul li::after{
 }
 
 .pied-de-page{
-    @extend .en-tete
+    @extend .en-tete;
+}
+.reseaux{
+    & .fa-instagram{
+        font-size: 35px;
+        margin: 0 20px;
+    }
+    & .fa-x-twitter{
+        font-size: 35px;
+    }
 }
 
 
