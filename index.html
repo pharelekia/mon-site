@@ -14,7 +14,17 @@
 
         <div class="en-tete">
             <div class="logo"><span>Light</span> studio</div>
-            <div class="list">
+            <div>
+                <a href="#" id="openBtn">
+                    <span class="burger-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                </a>
+            </div>
+            <div id="mySidenav" class="list">
+                <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
                     <li>Accueil</li>
                     <li>À propos</li>
@@ -67,5 +77,24 @@
         </div>
     </div>
 
+    <script>
+        let sidenav = document.getElementById("mySidenav");
+        let openBtn = document.getElementById("openBtn");
+        let closeBtn = document.getElementById("closeBtn");
+
+        openBtn.onclick = openNav;
+        closeBtn.onclick = closeNav;
+
+
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+        sidenav.classList.add("active");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+        sidenav.classList.remove("active");
+        }
+    </script>
 </body>
 </html>

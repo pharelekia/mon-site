@@ -1,7 +1,9 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 .en-tete, .pied-de-page {
@@ -53,6 +55,31 @@ ul li::after {
     transform: scaleX(1);
   }
 }
+/* Close btn */
+.close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  text-decoration: none;
+  display: none;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  display: none;
+}
+
+/* Active class */
+.list.active {
+  right: 0;
+}
+
 .info-perso {
   background-color: #1f2039;
   height: 80vh;
@@ -213,4 +240,102 @@ ul li::after {
 }
 .reseaux .fa-x-twitter {
   font-size: 35px;
+}
+
+@media screen and (max-width: 400px) {
+  .mes-projets {
+    margin-top: 5vh;
+  }
+  .mes-projets-photos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+  }
+  .mes-projets-photos img {
+    width: 300px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .info-perso {
+    height: 110vh;
+  }
+  .info-perso-section {
+    margin: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .info-perso-section-1 {
+    width: 350px;
+    margin: 0;
+  }
+  .info-perso-section-1 h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .info-perso-section-1 p {
+    text-align: justify;
+  }
+  .info-perso-section-1 button {
+    margin-left: 50px;
+  }
+  .info-perso .profil img {
+    width: 350px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .list {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -550px;
+    background-color: #1f2039;
+    transition: right 0.5s ease;
+  }
+  .list ul {
+    flex-direction: column;
+  }
+  .list ul li {
+    padding-top: 10px;
+    color: white;
+  }
+  .close {
+    display: block;
+  }
+  .burger-icon span {
+    display: block;
+  }
+  .me-contacter {
+    margin-top: 0;
+    height: 70vh;
+  }
+  .me-contacter form {
+    margin-left: 20px;
+  }
+  .me-contacter form .mon-input {
+    flex-direction: column;
+  }
+  .me-contacter form .mon-input div {
+    margin: 10px 10px;
+  }
+  .me-contacter form .mon-input input {
+    width: 300px;
+    height: 35px;
+    margin-top: 0;
+  }
+  .me-contacter form .area-txt {
+    color: #fff;
+    margin-left: 10px;
+  }
+  .me-contacter form .area-txt textarea {
+    width: 17em;
+    height: 130px;
+    margin-top: 0;
+  }
+  .me-contacter form button {
+    transform: translate(5vh, 2vh);
+  }
 }/*# sourceMappingURL=style.css.map */
